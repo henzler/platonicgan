@@ -5,6 +5,7 @@ This repository contains code for the paper [Escaping Plato’s Cave: 3D Shape f
 
 More detailed information and results can be found on our [project page](https://geometry.cs.ucl.ac.uk/projects/2019/platonicgan/).
 
+![Teaser](images/teaser.jpg)
 
 ## Data
 
