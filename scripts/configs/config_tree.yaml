@@ -1,0 +1,54 @@
+data:
+  cube_len: 64
+  name: image # shapenet | image | ucb
+  path_dir: datasets/tree
+  use_classes: ['tree']
+  use_n_samples_2d: -1
+  use_n_samples_3d: -1
+device: cuda
+logger:
+  log_scalars_every: 100
+  log_files_every: 500
+  log_gradients: True
+  log_raw: True
+  log_slices: True
+  num_examples: 10
+  save_checkpoint: True
+mode: platonic # platonic | platonic_3D | 3D
+task: reconstruction
+models:
+  discriminator:
+    n_features_min: 64
+    name: default
+  encoder:
+    n_features_min: 64
+    name: default
+  generator:
+    n_features_min: 64
+    name: default
+n_workers: 4
+name: Tree
+renderer:
+  absorption_factor: 20.0
+  type: emission_absorption # absorption_only | emission_absorption | visual_hull
+tests:
+  activate: true
+training:
+  adversarial_term_lambda_2d: 1.0
+  adversarial_term_lambda_3d: 0.0
+  batch_size: 8
+  d_thresh: 0.6
+  data_term_lambda_2d: 8.0
+  data_term_lambda_3d: 0.0
+  lr_d: 0.00001
+  lr_g: 0.0025
+  n_epochs: 10000
+  optimizer_d: adam
+  optimizer_g: adam
+  resume: False
+  seed: 132
+  loss: vanilla  # wgangp | vanilla
+  n_views: 1
+  view_sampling: random
+  z_size: 200
+job_id: 1

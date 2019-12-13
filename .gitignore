@@ -1,0 +1,10 @@
+output/
+server/
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# PyCharm
+.idea
