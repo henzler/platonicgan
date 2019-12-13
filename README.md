@@ -50,6 +50,13 @@ or for a specific config:
 
 `python train.py --config_file=scripts/configs/your_config_file.yaml`
 
+
+### Track training progress
+
+Use tensorboard to visualise intermediate training results:
+
+`tensorboard --logdir=.`
+
 ## Bibtex
 
 If you use this code for your research, please cite our paper.
