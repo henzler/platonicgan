@@ -138,7 +138,7 @@ def metric_mse(output, target):
 
 
 def metric_cd(output, target):
-    distance_transform_target = scipy.ndimage.distance_transform_edt(target)
+    distance_transform_target = scipy.ndimage.distance_transform_edt(1-target)
     return (distance_transform_target * output).sum() / target.size
 
 
